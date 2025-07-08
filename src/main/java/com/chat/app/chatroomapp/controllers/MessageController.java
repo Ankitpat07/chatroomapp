@@ -11,6 +11,8 @@ import java.time.OffsetDateTime;
 @RestController
 public class MessageController {
 
+    //server receives the message & process it
+
     @MessageMapping("/message")
     @SendTo("/topic/return-to")
     public Message getContent(Message message){
